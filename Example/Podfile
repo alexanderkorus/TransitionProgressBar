@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TransitionProgressBar_Example' do
+  pod 'TransitionProgressBar', :path => '../'
+
+  target 'TransitionProgressBar_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
