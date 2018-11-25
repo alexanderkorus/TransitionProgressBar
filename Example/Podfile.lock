@@ -1,0 +1,23 @@
+PODS:
+  - SnapKit (4.0.1)
+  - TransitionProgressBar (0.1.0):
+    - SnapKit (~> 4.0.0)
+
+DEPENDENCIES:
+  - TransitionProgressBar (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SnapKit
+
+EXTERNAL SOURCES:
+  TransitionProgressBar:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  TransitionProgressBar: 8ef23f6475483979066c671c6218c816294db907
+
+PODFILE CHECKSUM: 8ad494b031bd7c9cd2fc0daaf73acbabee92d505
+
+COCOAPODS: 1.6.0.beta.2
