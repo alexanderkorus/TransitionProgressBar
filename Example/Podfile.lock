@@ -1,7 +1,7 @@
 PODS:
-  - SnapKit (4.0.1)
+  - SnapKit (4.2.0)
   - TransitionProgressBar (0.1.0):
-    - SnapKit (~> 4.0.0)
+    - SnapKit (~> 4.2.0)
 
 DEPENDENCIES:
   - TransitionProgressBar (from `../`)
@@ -15,8 +15,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
-  TransitionProgressBar: 8ef23f6475483979066c671c6218c816294db907
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  TransitionProgressBar: 7ce888a2931970b9ba17390af894dc1caaade847
 
 PODFILE CHECKSUM: 8ad494b031bd7c9cd2fc0daaf73acbabee92d505
 
