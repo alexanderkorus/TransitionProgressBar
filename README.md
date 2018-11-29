@@ -9,7 +9,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-![alt text](https://raw.githubusercontent.com/alexanderkorus/TransitionProgressBar/master/example.png)
+![alt text](https://raw.githubusercontent.com/alexanderkorus/TransitionProgressBar/master/Example.png)
 
 ## Requirements
 
