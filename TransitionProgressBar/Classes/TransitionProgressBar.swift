@@ -59,7 +59,7 @@ public class TransitionProgressBar: UIView {
     
     public var rightProgressColor: UIColor = UIColor.lightGray {
         didSet {
-            self.container.backgroundColor = leftProgressColor
+            self.container.backgroundColor = rightProgressColor
             self.setNeedsLayout()
         }
     }
