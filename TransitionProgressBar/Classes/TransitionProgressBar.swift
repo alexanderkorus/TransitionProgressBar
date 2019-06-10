@@ -124,7 +124,8 @@ public class TransitionProgressBar: UIView {
         
         if roundedCorners {
             self.container.round(corners: [.topRight, .bottomRight, .topLeft, .bottomLeft], radius: _cornerRadius)
-            self.leftProgressView.round(corners: [.topLeft, .bottomLeft], radius: _cornerRadius)
+            self.leftProgressView.layer.cornerRadius = _cornerRadius
+            self.leftProgressView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
         }
     }
     

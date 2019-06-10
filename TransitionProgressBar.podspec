@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TransitionProgressBar'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'A simple two state progress bar with a transition between both states'
 
 # This description is used to generate tags and improve search results.
@@ -38,7 +38,7 @@ A simple two state progress bar with a transition between both states.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'SnapKit', '~> 4.2.0'
+  s.dependency 'SnapKit', '~> 5.0.0'
   
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
 end

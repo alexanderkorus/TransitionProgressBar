@@ -29,6 +29,8 @@ extension UIView {
         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: self.frame.size.width * radius, height: self.frame.size.height * radius))
         let mask = CAShapeLayer()
         mask.path = path.cgPath
+        mask.backgroundColor = self.backgroundColor?.cgColor
+        mask.fillColor = self.backgroundColor?.cgColor
         self.clipsToBounds = true
         self.layer.mask = mask
     }

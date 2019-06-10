@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import TransitionProgressBar
+import Relieve
 
 class ViewController: UIViewController {
     
@@ -26,9 +27,11 @@ class ViewController: UIViewController {
     // MARK: - View Lifecycle Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        self.changeProgressButton.addTarget(self, action: #selector(self.buttonClicked), for: .touchUpInside)
-      
+        
+        self.tableView.register(Cell.self)
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
     }
     
     
@@ -43,23 +46,64 @@ class ViewController: UIViewController {
 // MARK: - Views
 private extension ViewController {
     unowned var rootView: View { return self.view as! View }
-    unowned var leftProgressTextField: UITextField { return self.rootView.leftProgressTextField }
-    unowned var changeProgressButton: UIButton { return self.rootView.changeProgressButton }
-    unowned var bar: TransitionProgressBar { return self.rootView.bar }
+    unowned var tableView: UITableView { return self.rootView.tableView }
 }
 
 // MARK: - Target Action Functions
 extension ViewController {
     
-    @objc func buttonClicked() {
-        if let progress = NumberFormatter().number(from: self.leftProgressTextField.text ?? "0") as? CGFloat {
-            self.bar.leftProgress = progress
-        }
-    }
+   
     
-}
+} 
 
 // MARK -  Delegate Functions
-
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.Identifier, for: indexPath) as! Cell
+        
+        switch indexPath.row {
+            case 0:
+                cell.bar.leftProgress = 0.01
+            case 1:
+                cell.bar.leftProgress = 0.42
+            case 2:
+                cell.bar.leftProgress = 0.61
+            case 3:
+                cell.bar.leftProgress = 0.56
+            case 4:
+                cell.bar.leftProgress = 1.0
+            default:
+                cell.bar.leftProgress = 0.5
+        }
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        switch indexPath.row {
+        case 0:
+            (cell as? Cell)?.bar.leftProgress = 0.01
+        case 1:
+            (cell as? Cell)?.bar.leftProgress = 0.42
+        case 2:
+            (cell as? Cell)?.bar.leftProgress = 0.61
+        case 3:
+            (cell as? Cell)?.bar.leftProgress = 0.56
+        case 4:
+            (cell as? Cell)?.bar.leftProgress = 1.0
+        default:
+            (cell as? Cell)?.bar.leftProgress = 0.5
+        }
+        
+        
+    }
+}
 
 

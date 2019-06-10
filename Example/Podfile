@@ -2,4 +2,5 @@ use_frameworks!
 
 target 'TransitionProgressBar_Example' do
   pod 'TransitionProgressBar', :path => '../'
+  pod 'Relieve', :git => 'https://github.com/alexanderkorus/Relieve.git'
 end

@@ -9,28 +9,14 @@
 import UIKit
 import SnapKit
 import TransitionProgressBar
+import Relieve
 
 class View: UIView {
     
     // MARK: - Subviews
-    let bar: TransitionProgressBar = {
-        let bar: TransitionProgressBar = TransitionProgressBar()
-        bar.roundedCorners = true
-        return bar
-    }()
-    
-    let leftProgressTextField: UITextField = {
-        let view: UITextField = UITextField()
-        view.borderStyle = UITextField.BorderStyle.line
+    let tableView: UITableView = {
+        let view = UITableView()
         return view
-    }()
-    
-    
-    let changeProgressButton: UIButton = {
-        let button: UIButton = UIButton()
-        button.setTitle("Change progress", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
-        return button
     }()
     
     // MARK: - Initializers
@@ -40,35 +26,18 @@ class View: UIView {
         self.backgroundColor = .white
         
         // Set Subviews
-        for view in [self.bar, self.leftProgressTextField, self.changeProgressButton] {
+        for view in [self.tableView] {
             self.addSubview(view)
             view.translatesAutoresizingMaskIntoConstraints = true
         }
         
-        // Constraints
-        self.leftProgressTextField.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.bottom.equalTo(self.bar.snp.top).offset(-10)
-            $0.width.equalTo(self.bar.snp.width).multipliedBy(0.5)
-            $0.height.equalTo(40.0)
+        
+        self.tableView.snp.remakeConstraints {
+            $0.top.equalTo(self.safeAreaLayoutGuide.snp.top)
+            $0.leading.equalToSuperview()
+            $0.trailing.equalToSuperview()
+            $0.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom)
         }
-        
-        
-        self.changeProgressButton.snp.makeConstraints {
-            $0.top.equalTo(self.bar.snp.bottom).offset(20)
-            $0.centerX.equalToSuperview()
-            $0.width.equalTo(200)
-            $0.height.equalTo(30)
-        }
-        
-        self.bar.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview()
-            $0.leading.equalToSuperview().offset(15)
-            $0.trailing.equalToSuperview().inset(15)
-            $0.height.equalTo(25.0)
-        }
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

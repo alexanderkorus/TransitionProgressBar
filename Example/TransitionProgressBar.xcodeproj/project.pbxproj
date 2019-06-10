@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E1B605C21AB532E00E95628 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B605B21AB532E00E95628 /* View.swift */; };
+		4E871B3222A174B4000BB8FC /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E871B3122A174B4000BB8FC /* Cell.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
@@ -21,6 +22,7 @@
 		27D3F487E00067E9A837B0F5 /* Pods-TransitionProgressBar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransitionProgressBar_Example.release.xcconfig"; path = "Target Support Files/Pods-TransitionProgressBar_Example/Pods-TransitionProgressBar_Example.release.xcconfig"; sourceTree = "<group>"; };
 		344DCADE519FE219ADAFFB5E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4E1B605B21AB532E00E95628 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		4E871B3122A174B4000BB8FC /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* TransitionProgressBar_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionProgressBar_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 				4E1B605B21AB532E00E95628 /* View.swift */,
+				4E871B3122A174B4000BB8FC /* Cell.swift */,
 			);
 			name = "Example for TransitionProgressBar";
 			path = TransitionProgressBar;
@@ -181,6 +184,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -238,6 +242,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TransitionProgressBar_Example/Pods-TransitionProgressBar_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Relieve/Relieve.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/TransitionProgressBar/TransitionProgressBar.framework",
 			);
@@ -245,6 +250,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Relieve.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionProgressBar.framework",
 			);
@@ -261,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				4E871B3222A174B4000BB8FC /* Cell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				4E1B605C21AB532E00E95628 /* View.swift in Sources */,
 			);

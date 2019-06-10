@@ -1,9 +1,12 @@
 PODS:
-  - SnapKit (4.2.0)
-  - TransitionProgressBar (0.1.0):
-    - SnapKit (~> 4.2.0)
+  - Relieve (0.1.0):
+    - SnapKit (~> 5.0.0)
+  - SnapKit (5.0.0)
+  - TransitionProgressBar (0.1.2):
+    - SnapKit (~> 5.0.0)
 
 DEPENDENCIES:
+  - Relieve (from `https://github.com/alexanderkorus/Relieve.git`)
   - TransitionProgressBar (from `../`)
 
 SPEC REPOS:
@@ -11,13 +14,21 @@ SPEC REPOS:
     - SnapKit
 
 EXTERNAL SOURCES:
+  Relieve:
+    :git: https://github.com/alexanderkorus/Relieve.git
   TransitionProgressBar:
     :path: "../"
 
+CHECKOUT OPTIONS:
+  Relieve:
+    :commit: 13ad7c353c045053a093001f7d6cdd3f41bf9fd0
+    :git: https://github.com/alexanderkorus/Relieve.git
+
 SPEC CHECKSUMS:
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  TransitionProgressBar: 7ce888a2931970b9ba17390af894dc1caaade847
+  Relieve: 4b45db3111eb1478802c3d56c437b878de859137
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  TransitionProgressBar: 7a850fd5a0b892688d6dd973810ef5ebfc9c59bb
 
-PODFILE CHECKSUM: 004e5be6135bb64a269260d6d68f92137d956c64
+PODFILE CHECKSUM: 3d943829ec3bac19be47006a352a572089c467c5
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.6.1
